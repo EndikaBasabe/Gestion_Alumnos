@@ -6,12 +6,6 @@ public class Alumno {
 	private String nombre;
 	private String apellido;
 	
-	public Alumno(int edad,String nombre,String apellido){
-		this.edad = edad;
-		this.nombre = nombre;
-		this.apellido = apellido;
-	}
-	
 	public Alumno(){
 		
 	}

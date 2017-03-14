@@ -5,11 +5,6 @@ public class Usuario {
 	private String nombreUsuario;
 	private String passwordUsuario;
 	
-	public Usuario(String nombreUsuario,String passwordUsuario){
-		this.nombreUsuario = nombreUsuario;
-		this.passwordUsuario = passwordUsuario;
-		
-	}
 	
 	public Usuario(){
 		
