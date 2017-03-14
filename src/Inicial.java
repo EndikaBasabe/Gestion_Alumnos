@@ -21,7 +21,10 @@ public class Inicial extends JFrame {
 
 	
 	
-	Usuario usuario = new Usuario();
+	Usuario usuario = new Usuario("Endika","12345678");
+	Usuario usuario1 = new Usuario("Iraide","12345678");
+	Usuario usuario2 = new Usuario("Gorka","12345678");
+	
 		
 	/**
 	 * Launch the application.
@@ -92,7 +95,7 @@ public class Inicial extends JFrame {
 	}
 	
 	protected void abrirComprobacion(){
-		Comprobacion comprobacion = new Comprobacion(this,"Comprobar cuenta",true);
+		Comprobacion comprobacion = new Comprobacion(textFieldUsuario.getText());
 		comprobacion.setVisible(true);
 	}
 }
