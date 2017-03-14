@@ -8,6 +8,8 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import java.awt.Font;
 import javax.swing.JLabel;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class Comprobacion extends JDialog {
 
@@ -16,10 +18,7 @@ public class Comprobacion extends JDialog {
 	/**
 	 * Create the dialog.
 	 */
-	public Comprobacion(JFrame parent,String titulua,boolean modal){
-		
-		super(parent,titulua,modal);
-		
+	public Comprobacion(String usuario){
 		
 		setBounds(100, 100, 450, 300);
 		getContentPane().setLayout(new BorderLayout());
@@ -28,6 +27,11 @@ public class Comprobacion extends JDialog {
 		contentPanel.setLayout(null);
 		{
 			JButton buttonContinuar = new JButton("Continuar");
+			buttonContinuar.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent arg0) {
+					abrirAcciones();
+				}
+			});
 			buttonContinuar.setFont(new Font("Tahoma", Font.BOLD, 11));
 			buttonContinuar.setBounds(156, 146, 89, 23);
 			contentPanel.add(buttonContinuar);
@@ -37,22 +41,13 @@ public class Comprobacion extends JDialog {
 			labelOngiEtorri.setBounds(105, 86, 177, 14);
 			contentPanel.add(labelOngiEtorri);
 		}
-		{
-			JPanel buttonPane = new JPanel();
-			buttonPane.setLayout(new FlowLayout(FlowLayout.RIGHT));
-			getContentPane().add(buttonPane, BorderLayout.SOUTH);
-			{
-				JButton okButton = new JButton("OK");
-				okButton.setActionCommand("OK");
-				buttonPane.add(okButton);
-				getRootPane().setDefaultButton(okButton);
-			}
-			{
-				JButton cancelButton = new JButton("Cancel");
-				cancelButton.setActionCommand("Cancel");
-				buttonPane.add(cancelButton);
-			}
-		}
+	}
+
+	protected void abrirAcciones() {
+		// TODO Auto-generated method stub
+		Acciones acciones = new Acciones();
+		acciones.setVisible(true);
+		this.dispose();
 	}
 
 }
