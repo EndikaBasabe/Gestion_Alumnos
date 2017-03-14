@@ -62,6 +62,11 @@ public class Acciones extends JDialog {
 		}
 		{
 			JButton buttonMedia = new JButton("Media Edad Alumnos");
+			buttonMedia.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					
+				}
+			});
 			buttonMedia.setFont(new Font("Tahoma", Font.BOLD, 11));
 			buttonMedia.setBounds(10, 159, 164, 23);
 			contentPanel.add(buttonMedia);
@@ -70,5 +75,8 @@ public class Acciones extends JDialog {
 		JComboBox comboBoxAlumnos = new JComboBox();
 		comboBoxAlumnos.setBounds(264, 120, 122, 20);
 		contentPanel.add(comboBoxAlumnos);
+	}
+	protected void mediaEdad(){
+	
 	}
 }
