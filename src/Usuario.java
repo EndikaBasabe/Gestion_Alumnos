@@ -6,8 +6,9 @@ public class Usuario {
 	private String passwordUsuario;
 	
 	
-	public Usuario(){
-		
+	public Usuario(String nombreUsuario,String passwordUsuario){
+		this.nombreUsuario = nombreUsuario;
+		this.passwordUsuario = passwordUsuario;
 	}
 
 	public String getNombreUsuario() {
